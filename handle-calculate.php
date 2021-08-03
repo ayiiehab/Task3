@@ -1,8 +1,8 @@
 <?php
-if (isset($_POST['submit'])) {
-    $firstNumInput = $_POST['firstNum'];
-    $secondNumInput = $_POST['secondNum'];
-    $oppInput = $_POST['opp'];
+if (isset($_GET['submit'])) {
+    $firstNumInput = $_GET['firstNum'];
+    $secondNumInput = $_GET['secondNum'];
+    $oppInput = $_GET['opp'];
 
     if ($oppInput == 'sum') 
     {

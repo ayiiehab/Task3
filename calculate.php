@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <form method="POST" action="handle-calculate.php" class="w-75 m-auto p-5 border">
+    <form method="GET" action="handle-calculate.php" class="w-75 m-auto p-5 border">
         <div class="form-group">
             <label for="firstNum">First Number</label>
             <input type="number" name="firstNum" class="form-control" id="firstNum" placeholder="Enter The First Number">

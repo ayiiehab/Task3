@@ -30,8 +30,27 @@
         </div>
 
 
-        <button class="btn btn-info" name="submit" value="submit">Submit</button>
+        <button class="btn btn-info" name="submit" value="submit">Submit</button> <br>
+
     </form>
+
+    <div class=" w-75 m-auto p-5 border ">
+       <p class='text-lg text-info'>The result is 
+        <?php 
+        if (isset($_GET['re'])) {
+        echo  $_GET['re'];
+        }
+        ?>
+        </p>
+
+        <!-- //  echo $_GET['re'];
+//         echo '<pre>';
+//         print_r($_GET);
+//         echo '</pre> <br>'; -->
+
+</div>
+
+   
     
 
 

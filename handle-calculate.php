@@ -1,33 +1,45 @@
 <?php
 if (isset($_GET['submit'])) {
+    $result;
     $firstNumInput = $_GET['firstNum'];
     $secondNumInput = $_GET['secondNum'];
     $oppInput = $_GET['opp'];
+    
+
+
 
     if ($oppInput == 'sum') 
     {
-      echo sum($firstNumInput, $secondNumInput);
+      $result= sum($firstNumInput, $secondNumInput);
 
     } 
     elseif ($oppInput == 'sub') 
     {
-        echo sub($firstNumInput, $secondNumInput);
+        $result= sub($firstNumInput, $secondNumInput);
     } 
     elseif ($oppInput == 'multi') 
     {
-        echo multi($firstNumInput, $secondNumInput);
+        $result= multi($firstNumInput, $secondNumInput);
     } 
     else 
     {
-        echo div($firstNumInput, $secondNumInput);
+        $result= div($firstNumInput, $secondNumInput);
     }
+
+  header("location: calculate.php?Value1=$firstNumInput&Value2=$secondNumInput&opperation=$oppInput&re=$result");
+
+        // echo '<pre>';
+        // print_r($_GET);
+        // echo '</pre> <br>';
+        // echo "<h3>The result : $result </h3";
+
 } 
 else 
 {
      header("location: calculate.php");
     // echo '<script>
     //          window.location = "http://localhost:8888/Task3/calculate.php";
-    //          </script>;';
+    //      </script>;';
 }
 
 
